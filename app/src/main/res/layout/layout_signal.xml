@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_ctrl">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_questionContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+
+            <RadioGroup
+                android:id="@+id/rg_selection_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rb_selection_a"
+                    style="@style/SingleChoiceAnswerStyle"
+                    android:tag="A" />
+
+                <RadioButton
+                    android:id="@+id/rb_selection_b"
+                    style="@style/SingleChoiceAnswerStyle"
+                    android:tag="B" />
+
+                <RadioButton
+                    android:id="@+id/rb_selection_c"
+                    style="@style/SingleChoiceAnswerStyle"
+                    android:tag="C" />
+
+                <RadioButton
+                    android:id="@+id/rb_selection_d"
+                    style="@style/SingleChoiceAnswerStyle"
+                    android:tag="D" />
+
+                <RadioButton
+                    android:id="@+id/rb_selection_e"
+
+                    style="@style/SingleChoiceAnswerStyle"
+                    android:tag="D" />
+
+                <RadioButton
+                    android:id="@+id/rb_selection_f"
+                    style="@style/SingleChoiceAnswerStyle"
+                    android:tag="D" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/rl_rightAnswer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:visibility="invisible">
+
+                <TextView
+                    android:id="@+id/tv_right_answer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/tv_back_answer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_ctrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_post"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="提交" />
+
+        <Button
+            android:id="@+id/bt_next"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="下一题"
+            android:visibility="gone"/>
+    </LinearLayout>
+</RelativeLayout>
