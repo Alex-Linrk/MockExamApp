@@ -6,6 +6,7 @@ import jxl.Cell;
 import jxl.Sheet;
 
 /**
+ * @author Administrator
  * Created by Administrator on 2016/8/19.
  */
 
@@ -27,6 +28,14 @@ public class MultipleChoice extends Question {
     public MultipleChoice(Sheet sheet,int row) {
         for (int column = 1;column < sheet.getColumns();column ++){
             Cell contentCell = sheet.getCell(column,row);
+            String content = contentCell.getContents().replace(" ","");
+            content = content.replace("\n","");
+            setValue(content,column);
+        }
+    }
+    public void setValue(Cell[] cells){
+        for (int column = 1;column < cells.length;column ++){
+            Cell contentCell = cells[column];
             String content = contentCell.getContents().replace(" ","");
             content = content.replace("\n","");
             setValue(content,column);
